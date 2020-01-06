@@ -23,32 +23,28 @@
       </header>
 
 
-    <div id="app">
-      <ul>
-        <li v-for="item in items">
-<div class="row">
-  <div class="col s12 m4">
-
-
-    <div class="card">
-      <div class="card-image">
-        <img :src="item['fields']['Photo'][0]['thumbnails']['large']['url']" alt="" v-if="item['fields']['Photo']" width="100%">
-        <span class="card-title">{{ item['fields']['Name'] }}</span>
+<div id="app">
+  <div class="row">
+    <ul class="listposts">
+    <li v-for="item in items">
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img :src="item['fields']['Photo'][0]['thumbnails']['large']['url']" alt="" v-if="item['fields']['Photo']" width="100%">
+              <span class="card-title">{{ item['fields']['Name'] }}</span>
+            </div>
+            <div class="card-content">
+              <p>{{ item['fields']['Notes'] }}</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="card-content">
-        <p>{{ item['fields']['Notes'] }}</p>
-      </div>
-      <div class="card-action">
-        <a href="#">This is a link</a>
-      </div>
-    </div>
-  </div>
+  </ul>
 </div>
-</ul>
-
-
-
-</div><!--app-->
+<!--app-->
 </div>
 
 
