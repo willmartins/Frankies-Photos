@@ -24,7 +24,7 @@
   <div class="row">
     <ul class="listposts">
     <li v-for="item in items">
-        <div class="col s12 m4">
+        <div class="col s12 m3">
           <div class="card">
             <div class="card-image">
               <img :src="item['fields']['Photo'][0]['thumbnails']['large']['url']" alt="" v-if="item['fields']['Photo']" width="100%">
@@ -111,7 +111,7 @@
                         var app_key = "keyUrFhh1TO7LFb6F";
                         this.items = []
 axios.get(
-                            "https://api.airtable.com/v0/"+app_id+"/Table%201?maxRecords=3&view=Grid%20view",
+                            "https://api.airtable.com/v0/"+app_id+"/Table%201?maxRecords=16&view=Grid%20view",
                             {
                                 headers: { Authorization: "Bearer "+app_key }
                             }
